@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import image1 from '../images/layout/gestion.webp';
+import image2 from '../images/layout/encuentros.webp';
+import image3 from '../images/layout/soluciones.webp';
+---
+
+<div class="max-w-screen-lg pt-4 m-auto text-black w-5/6 md:w-2/3 text-center">
+  <h1 class="w-full text-[50px] leading-tight font-light">Bienvenidos a la Iniciativa</h1>
+  <span class="w-full text-[50px] font-bold">Deseo Compartir</span>
+
+  <div class="flex justify-around my-4 text-orange-600 m-auto w-2/3 md:w-2/3">
+    <span>Participar</span>
+    <span class="border border-r-slate-500"></span>
+    <span>Compartir</span>
+    <span class="border border-r-slate-500"></span>
+    <span>Influenciar</span>
+  </div>
+
+  <p class="font-light">
+    Aumentamos la <span class="font-semibold">Participación Ciudadana</span> a través de una <span class="font-semibold">Ruta de Gestión CoSocial Integradora</span>, para ayudar a mejorar la <span class="font-semibold">Convivencia Social</span> y el <span class="font-semibold">Desarrollo</span> de los habitantes de las Unidades Vecinales del País.
+  </p>
+
+</div>
+
+<div class="max-w-screen-lg w-5/6 grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-5 text-black m-auto my-20">
+  <div class="font-light max-h-full">
+    <p class="mb-6">
+      <span class="font-semibold">Deseo Compartir</span> propone un <span class="font-semibold">Modelo de Gestión e Interacción CoSocial</span>, participativo y digital ideado para Organizaciones Comunitarias y Sociales, que necesitan aumentar la participación ciudadana en sus territorios.
+    </p>
+    <p>
+      <span class="font-semibold">Este Modelo de Gestión e Interacción CoSocial</span> está estructurado de acuerdo a un tipo especial e innovador de conocimiento que está basado en la <span class="font-semibold">Filosofía y Método Bienestar Superior</span>, y que utiliza una Plataforma Web Abierta y Gratuita como medio digital de conexión, interacción y participación ciudadana.
+    </p>
+  </div>
+  <Image
+    src={image1}
+    alt="Gestión e Interacción CoSocial"
+    title="Gestión e Interacción CoSocial"
+    class="h-min rounded-lg max-h-[600px]"
+  />
+</div>
+
+<div class="max-w-screen-lg w-5/6 grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-5 text-black m-auto my-20">
+  <Image
+    src={image2}
+    alt="Gestión e Interacción CoSocial"
+    title="Gestión e Interacción CoSocial"
+    class="h-min rounded-lg max-h-[600px]"
+  />
+  <div class="font-light max-h-full">
+    <p class="mb-6">
+      Buscamos, además, transformar y/o construir espacios de <span class="font-semibold">Encuentros CoSociales</span> que permitan generar un <span class="font-semibold">Entorno de Influencia</span> positivo en las Unidades Vecinales del país, para facilitar las interacciones en un sistema de relaciones entre personas que provoquen y propicien acciones como: coordinar, definir propósitos, hacer propuestas, negociar, pedir ayuda, colaborar, etc. Aportando al florecimiento de la <span class="font-semibold">Voluntad Política</span> y despertando el <span class="font-semibold">Deseo de Compartir</span> al interior de los <span class="font-semibold">Entornos de Influencia</span>.
+    </p>
+  </div>
+</div>
+
+<div class="min-h-[40px] w-full py-12 px-4 bg-[#809316] text-center italic">
+  <p class="max-w-screen-lg m-auto">
+    Revisa visualmente una <span class="font-bold">DEMO</span> de nuestra aplicación web gratuita, que utilizamos como medio digital de conexión, interacción y participación ciudadana, para la gestión de tu comunidad.
+  </p>
+  <div class="rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-1 px-3 m-auto max-w-max mt-3">Demo</div>
+</div>
+
+<div class="max-w-screen-lg w-5/6 grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-5 text-black m-auto my-20">
+  <Image
+    src={image3}
+    alt="Gestión e Interacción CoSocial"
+    title="Gestión e Interacción CoSocial"
+    class="h-min rounded-lg max-h-[600px]"
+  />
+  <div class="font-light max-h-full">
+    <h2 class="font-bold text-[30px]">Descubre nuestras soluciones</h2>
+    <p class="mb-6">
+      gratuitas para comenzar gestionar de forma más profesional y transparente, todo en un solo lugar:
+    </p>
+    <p><span class="font-bold">Procesos Participativos:</span> Aquí participamos tod@s.</p>
+    <p><span class="font-semibold">Juntas de Vecinos:</span> Personas más informadas y conectadas.</p>
+    <p><span class="font-semibold">Organizaciones Comunitarias y Sociales:</span> Gestión a un nivel superior en tu comunidad.</p>
+    <p><span class="font-semibold">Lista de Deseos:</span> Comparte un Deseo, Iniciativa o Sueño que emocione, comprometa y/o impacte positivamente a muchas personas de tu comunidad.</p>
+  </div>
+</div>
+
+<div class="py-12 px-12 my-20 bg-[#EBEBEB]/75 text-black">
+  <div class="max-w-screen-lg w-2/3 m-auto">
+    <h3 class="text-[30px] w-full md:w-1/2 leading-tight"><span class="text-nowrap">Encuentra <span class="font-semibold">Deseo Compartir</span></span> <span class="text-nowrap">en tu Comuna</span></h3>
+    <p class="text-sm my-3">Selecciona tu comuna para encontrar y compartir deseos específicos de tu comunidad.</p>
+    <div class="inline-flex align-middle gap-x-3">
+      <span class="text-[14px]">Selecciona tu comuna</span>
+      <div class="p-2 bg-[#809316] rounded-full">
+        <p class="text-white font-light text-[12px] ps-3 pe-12 py-1 text-nowrap">-- Selecciona tu Comuna --</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-screen-lg m-auto my-10 text-black font-[20px] font-light text-center">
+  <p class="w-5/6 m-auto">Si te interesa conocer cómo la <span class="font-semibold">Iniciativa Deseo Compartir</span> puede ayudar a mejorar la gestión de tu comunidad u organización comunitaria y social, contáctanos y revisamos la forma de aportar al logro de sus objetivos.</p>
+  <div class="rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-2 px-6 m-auto max-w-max mt-3 text-white">WHATSAPP</div>
+</div>

@@ -1,0 +1,22 @@
+---
+import image from '../images/layout/header.webp';
+import logo from '../images/logo.webp';
+import { Image } from "astro:assets";
+---
+
+<div class="relative">
+  <Image
+    src={logo}
+    alt="logo"
+    class="absolute top-5 right-4 h-[15%] w-min"
+  />
+  <Image
+    src={image}
+    alt="nombre"
+    class="w-full max-h-screen cover"
+  />
+
+  <div class="absolute bottom-0 bg-zinc-950/75 min-h-24 px-3 py-9 w-full flex inline-flex justify-center align-middle italic text-[25px]">
+    <div class="w-full md:w-1/2 text-center">Te impulsamos a <span class="font-bold">“reconocer la necesidad de organizar socialmente la vida en comunidad”</span>.</div>
+  </div>
+</div>
