@@ -12,11 +12,56 @@ import { Image } from "astro:assets";
   />
   <Image
     src={image}
-    alt="nombre"
-    class="w-full max-h-screen cover"
+    alt="social-header"
+    class="w-full max-h-screen bg-contain bg-center"
+    decoding="async"
+    loading="lazy"
   />
 
-  <div class="absolute bottom-0 bg-zinc-950/75 min-h-24 px-3 py-4 md:py-9 w-full flex inline-flex justify-center align-middle italic text-[16px] md:text-[25px]">
-    <div class="w-full md:w-1/2 text-center">Te impulsamos a <span class="font-bold">“reconocer la necesidad de organizar socialmente la vida en comunidad”</span>.</div>
+  <div id="slider" class="absolute bottom-0 bg-zinc-950/75 min-h-24 md:py-9 w-full overflow-hidden flex flex-nowrap align-middle italic text-[16px] md:text-[25px]">
+      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <div class="text-center w-5/6 md:w-1/2">
+          Te impulsamos a <span class="font-bold">“reconocer la necesidad de organizar socialmente la vida en comunidad”</span>.
+        </div>
+      </div>
+      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <div class="text-center w-5/6 md:w-1/2">
+          Ven a recorrer con nosotros una nueva <span class="font-bold">“Ruta de Gestión CoSocial Integradora”</span>.
+        </div>
+      </div>
+      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <div class="text-center w-5/6 md:w-1/2">
+          Queremos contribuir a <span class="font-bold">“que sea la ciudadanía la que lidere las transformaciones que son requeridas”</span>.
+        </div>
+      </div>
+      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <div class="text-center w-5/6 md:w-1/2">
+          <span class="font-bold">“Aumentar la Participación Ciudadana y Mejorar la Convivencia Social en las Unidades Vecinales de nuestro País”</span> es nuestro Propósito Principal.
+        </div>
+      </div>
+      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <div class="text-center w-5/6 md:w-1/2">
+          En Deseo Compartir aspiramos a ser <span class="font-bold">“La Red Social de las Organizaciones Comunitarias y Sociales de Chile”</span>.
+        </div>
+      </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('#slider');
+    if (slider !== null) {
+      setTimeout(function moveSlide() {
+          const max = slider.scrollWidth - slider.clientWidth;
+          const left = slider.clientWidth;
+  
+          if (max <= slider.scrollLeft + left) {
+              slider.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+              slider.scrollBy({ left, behavior: 'smooth' });
+          }
+          setTimeout(moveSlide, 5000);
+      }, 5000);
+    }
+  });
+</script>
