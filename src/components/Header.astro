@@ -4,48 +4,58 @@ import logo from '../images/logo.webp';
 import { Image } from "astro:assets";
 ---
 
-<div class="relative">
-  <Image
-    src={logo}
-    alt="logo"
-    class="absolute top-5 right-4 h-[15%] w-min"
-  />
+<div class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <Image
     src={image}
     alt="social-header"
-    class="w-full max-h-screen bg-contain bg-center"
+    class="absolute inset-0 object-cover w-full h-full"
     decoding="async"
     loading="lazy"
   />
 
+  <Image
+    src={logo}
+    alt="logo"
+    class="absolute top-5 right-4 h-[15%] w-auto"
+  />
+
+  <!-- Slider de texto en la parte inferior -->
   <div id="slider" class="absolute bottom-0 bg-zinc-950/75 min-h-24 md:py-9 w-full overflow-hidden flex flex-nowrap align-middle italic text-[16px] md:text-[25px]">
-      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
-        <div class="text-center w-5/6 md:w-1/2">
-          Te impulsamos a <span class="font-bold">“reconocer la necesidad de organizar socialmente la vida en comunidad”</span>.
-        </div>
+    <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+      <div class="text-center w-5/6 md:w-1/2">
+        Te impulsamos a <span class="font-bold">“reconocer la necesidad de organizar socialmente la vida en comunidad”</span>.
       </div>
-      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
-        <div class="text-center w-5/6 md:w-1/2">
-          Ven a recorrer con nosotros una nueva <span class="font-bold">“Ruta de Gestión CoSocial Integradora”</span>.
-        </div>
+    </div>
+    <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+      <div class="text-center w-5/6 md:w-1/2">
+        Ven a recorrer con nosotros una nueva <span class="font-bold">“Ruta de Gestión CoSocial Integradora”</span>.
       </div>
-      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
-        <div class="text-center w-5/6 md:w-1/2">
-          Queremos contribuir a <span class="font-bold">“que sea la ciudadanía la que lidere las transformaciones que son requeridas”</span>.
-        </div>
+    </div>
+    <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+      <div class="text-center w-5/6 md:w-1/2">
+        Queremos contribuir a <span class="font-bold">“que sea la ciudadanía la que lidere las transformaciones que son requeridas”</span>.
       </div>
-      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
-        <div class="text-center w-5/6 md:w-1/2">
-          <span class="font-bold">“Aumentar la Participación Ciudadana y Mejorar la Convivencia Social en las Unidades Vecinales de nuestro País”</span> es nuestro Propósito Principal.
-        </div>
+    </div>
+    <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+      <div class="text-center w-5/6 md:w-1/2">
+        <span class="font-bold">“Aumentar la Participación Ciudadana y Mejorar la Convivencia Social en las Unidades Vecinales de nuestro País”</span> es nuestro Propósito Principal.
       </div>
-      <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
-        <div class="text-center w-5/6 md:w-1/2">
-          En Deseo Compartir aspiramos a ser <span class="font-bold">“La Red Social de las Organizaciones Comunitarias y Sociales de Chile”</span>.
-        </div>
+    </div>
+    <div class="text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+      <div class="text-center w-5/6 md:w-1/2">
+        En Deseo Compartir aspiramos a ser <span class="font-bold">“La Red Social de las Organizaciones Comunitarias y Sociales de Chile”</span>.
       </div>
+    </div>
   </div>
 </div>
+
+<style>
+  @media (max-width: 766px){
+    .min-h-screen{
+      min-height: calc(100vh - 100px);
+    }
+  }
+</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

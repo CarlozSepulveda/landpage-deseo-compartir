@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 import image1 from '../images/layout/gestion.webp';
 import image2 from '../images/layout/encuentros.webp';
 import image3 from '../images/layout/soluciones.webp';
+import Contact from "./Contact.astro";
 ---
 
-<div class="max-w-screen-lg pt-4 m-auto text-black w-full md:w-2/3 text-center my-12">
+<div class="max-w-screen-lg pt-4 m-auto text-black w-full md:w-2/3 text-center my-4">
   <div data-aos="fade-up" data-aos-easing="ease-in-cubic" data-aos-mirror="true">
     <h1 class="w-full text-[40px] md:text-[50px] leading-tight font-light">Bienvenidos a la Iniciativa</h1>
     <span class="w-full text-[40px] md:text-[50px] font-semibold">Deseo Compartir</span>
@@ -18,7 +19,9 @@ import image3 from '../images/layout/soluciones.webp';
     <span class="border border-slate-500"></span>
     <span>Influenciar</span>
   </div>
+</div>
 
+<div class="max-w-screen-lg pt-4 m-auto text-black w-full md:w-2/3 text-center my-12">
   <p class="font-light px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic" data-aos-mirror="true">
     Aumentamos la <span class="font-semibold">Participación Ciudadana</span> a través de una <span class="font-semibold">Ruta de Gestión CoSocial Integradora</span>, para ayudar a mejorar la <span class="font-semibold">Convivencia Social</span> y el <span class="font-semibold">Desarrollo</span> de los habitantes de las Unidades Vecinales del País.
   </p>
@@ -37,7 +40,7 @@ import image3 from '../images/layout/soluciones.webp';
     <p class="mb-6 text-justify">
       <span class="font-semibold">Deseo Compartir</span> propone un <span class="font-semibold">Modelo de Gestión e Interacción CoSocial</span>, participativo y digital ideado para Organizaciones Comunitarias y Sociales, que necesitan aumentar la participación ciudadana en sus territorios.
     </p>
-    <p class="text-justify"
+    <p class="text-justify">
       <span class="font-semibold">Este Modelo de Gestión e Interacción CoSocial</span> está estructurado de acuerdo a un tipo especial e innovador de conocimiento que está basado en la <span class="font-semibold">Filosofía y Método Bienestar Superior</span>, y que utiliza una Plataforma Web Abierta y Gratuita como medio digital de conexión, interacción y participación ciudadana.
     </p>
   </div>
@@ -59,7 +62,7 @@ import image3 from '../images/layout/soluciones.webp';
   </div>
 </div>
 
-<div class="min-h-[40px] w-full py-12 px-4 bg-[#809316] text-center italic my-6" data-aos="fade-up" data-aos-easing="ease-in-cubic">
+<div class="min-h-[40px] w-full py-12 px-4 bg-[#809316] text-center italic my-6 hidden" data-aos="fade-up" data-aos-easing="ease-in-cubic">
   <p class="max-w-screen-lg m-auto">
     Revisa visualmente una <span class="font-semibold">DEMO</span> de nuestra aplicación web gratuita, que utilizamos como medio digital de conexión, interacción y participación ciudadana, para la gestión de tu comunidad.
   </p>
@@ -69,30 +72,34 @@ import image3 from '../images/layout/soluciones.webp';
 </div>
 
 <div class="max-w-screen-lg w-full md:w-5/6 flex-wrap md:flex text-black m-auto my-12">
-  <Image
-    src={image3}
-    alt="Procesos Participativos"
-    title="Descubre nuestras soluciones"
-    class="h-min rounded-lg max-h-[600px] w-full md:w-1/2 p-4 md:p-0"
-    decoding="async"
-    loading="lazy" data-aos="fade-up" data-aos-easing="ease-in-cubic"
-  />
-  <div class="font-light max-h-full w-full md:w-1/2 px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
+  <div class="font-light max-h-full w-full px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
     <h2 class="font-semibold text-[25px] md:text-[30px] leading-tight">Descubre nuestras soluciones</h2>
     <p class="mb-6 text-justify">
       gratuitas para comenzar gestionar de forma más profesional y transparente, todo en un solo lugar:
     </p>
-    <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Procesos Participativos:</span> Aquí participamos tod@s.</p>
-    <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Juntas de Vecinos:</span> Personas más informadas y conectadas.</p>
-    <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Organizaciones Comunitarias y Sociales:</span> Gestión a un nivel superior en tu comunidad.</p>
-    <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Lista de Deseos:</span> Comparte un Deseo, Iniciativa o Sueño que emocione, comprometa y/o impacte positivamente a muchas personas de tu comunidad.</p>
+  </div>
+  <div class="flex-wrap md:flex">
+    <Image
+      src={image3}
+      alt="Procesos Participativos"
+      title="Descubre nuestras soluciones"
+      class="h-min rounded-lg max-h-[600px] w-full md:w-1/2 p-4 md:p-0"
+      decoding="async"
+      loading="lazy" data-aos="fade-up" data-aos-easing="ease-in-cubic"
+    />
+    <div class="font-light max-h-full w-full md:w-1/2 px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
+      <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Procesos Participativos:</span> Aquí participamos tod@s.</p>
+      <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Juntas de Vecinos:</span> Personas más informadas y conectadas.</p>
+      <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Organizaciones Comunitarias y Sociales:</span> Gestión a un nivel superior en tu comunidad.</p>
+      <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Lista de Deseos:</span> Comparte un Deseo, Iniciativa o Sueño que emocione, comprometa y/o impacte positivamente a muchas personas de tu comunidad.</p>
+    </div>
   </div>
 </div>
 
-<div class="py-12 px-3 my-12 bg-[#EBEBEB]/75 text-black" data-aos="fade-up" data-aos-easing="ease-in-cubic">
+<div class="py-12 px-3 my-12 bg-[#EBEBEB]/75 text-black hidden" data-aos="fade-up" data-aos-easing="ease-in-cubic">
   <div class="max-w-screen-lg m-auto">
     <h3 class="text-[20px] md:text-[30px] leading-tight"><span class="text-nowrap">Encuentra <span class="font-semibold">Deseo Compartir</span></span> <span class="text-nowrap">en tu Comuna</span></h3>
-    <p class="text-md my-3">Selecciona tu comuna para encontrar y compartir deseos específicos de tu comunidad.</p>
+    <p class="text-[16px] md:text-[20px] my-3">Selecciona tu comuna para encontrar y compartir deseos específicos de tu comunidad.</p>
     <div class="flex flex-wrap align-middle gap-x-3">
       <select name="" id="" class="py-2 px-3 bg-[#809316] rounded-full text-white text-[14px]">
         <option value="">-- Selecciona tu Comuna --</option>
@@ -103,7 +110,9 @@ import image3 from '../images/layout/soluciones.webp';
   </div>
 </div>
 
-<div class="max-w-screen-lg m-auto my-12 text-black font-[20px] font-light text-center px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
+<Contact />
+
+<div class="max-w-screen-lg m-auto my-14 text-black font-[20px] font-light text-center px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
   <p class="w-full md:w-5/6 m-auto mb-3">Si te interesa conocer cómo la <span class="font-semibold">Iniciativa Deseo Compartir</span> puede ayudar a mejorar la gestión de tu comunidad u organización comunitaria y social, contáctanos y revisamos la forma de aportar al logro de sus objetivos.</p>
   <a href="https://wa.me/56998163928?text=Hola amigos de Deseo Compartir, me gustaría contactarlos, mi nombre es: " class="mt-2 rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-2 px-6 m-auto max-w-max mt-3 text-white">WHATSAPP</a>
 </div>
