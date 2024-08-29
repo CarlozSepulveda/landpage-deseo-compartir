@@ -67,14 +67,14 @@ import Contact from "./Contact.astro";
     Revisa visualmente una <span class="font-semibold">DEMO</span> de nuestra aplicación web gratuita, que utilizamos como medio digital de conexión, interacción y participación ciudadana, para la gestión de tu comunidad.
   </p>
   <div class="mt-4">
-    <a href="https://demo.deseocompartir.cl" target="_blank"class="rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-2 px-4 m-auto max-w-max">Demo</a>
+    <a href="https://demo.deseocompartir.cl" target="_blank" class="rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-2 px-4 m-auto max-w-max">Demo</a>
   </div>
 </div>
 
 <div class="max-w-screen-lg w-full md:w-5/6 flex-wrap md:flex text-black m-auto my-12">
   <div class="font-light max-h-full w-full px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
     <h2 class="font-semibold text-[25px] md:text-[30px] leading-tight">Descubre nuestras soluciones</h2>
-    <p class="mb-6 text-justify">
+    <p class="mb-6 text-justify hidden md:block">
       gratuitas para comenzar gestionar de forma más profesional y transparente, todo en un solo lugar:
     </p>
   </div>
@@ -87,6 +87,11 @@ import Contact from "./Contact.astro";
       decoding="async"
       loading="lazy" data-aos="fade-up" data-aos-easing="ease-in-cubic"
     />
+    <div class="font-light max-h-full w-full px-4 md:hidden" data-aos="fade-up" data-aos-easing="ease-in-cubic">
+      <p class="mb-6 text-justify">
+        gratuitas para comenzar gestionar de forma más profesional y transparente, todo en un solo lugar:
+      </p>
+    </div>
     <div class="font-light max-h-full w-full md:w-1/2 px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
       <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Procesos Participativos:</span> Aquí participamos tod@s.</p>
       <p class="text-justify p-3 bg-slate-200 rounded-lg mb-2 shadow-md"><span class="font-semibold">Juntas de Vecinos:</span> Personas más informadas y conectadas.</p>
@@ -114,5 +119,5 @@ import Contact from "./Contact.astro";
 
 <div class="max-w-screen-lg m-auto my-14 text-black font-[20px] font-light text-center px-4" data-aos="fade-up" data-aos-easing="ease-in-cubic">
   <p class="w-full md:w-5/6 m-auto mb-3">Si te interesa conocer cómo la <span class="font-semibold">Iniciativa Deseo Compartir</span> puede ayudar a mejorar la gestión de tu comunidad u organización comunitaria y social, contáctanos y revisamos la forma de aportar al logro de sus objetivos.</p>
-  <a href="https://wa.me/56998163928?text=Hola amigos de Deseo Compartir, me gustaría contactarlos, mi nombre es: " class="mt-2 rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-2 px-6 m-auto max-w-max mt-3 text-white">WHATSAPP</a>
+  <a href="https://wa.me/56998163928?text=Hola amigos de Deseo Compartir, me gustaría contactarlos, mi nombre es: " target="_blank" class="mt-2 rounded-full bg-[#EBA801] hover:opacity-80 transition-all py-2 px-6 m-auto max-w-max mt-3 text-white">WHATSAPP</a>
 </div>
