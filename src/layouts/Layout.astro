@@ -1,20 +1,35 @@
 ---
+import thumbnail from '../images/thumbnail.png';
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const description = "Deseo Compartir - Modelo de Gestión e Interacción CoSocial";
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={thumbnail} />
+		<meta property="og:url" content="https://www.deseocompartir.cl/" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={thumbnail} />
 	</head>
 	<body>
 		<main>
