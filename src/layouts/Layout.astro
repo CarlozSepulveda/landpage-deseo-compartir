@@ -6,6 +6,7 @@ interface Props {
 
 const { title } = Astro.props;
 const description = "Modelo de Gestión e Interacción CoSocial";
+const url_thumbnail = "https://www.deseocompartir.cl"+thumbnail.src;
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ const description = "Modelo de Gestión e Interacción CoSocial";
 		<!-- Open Graph Meta Tags -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={"https://www.deseocompartir.cl"+thumbnail.src} />
+		<meta property="og:image" content={url_thumbnail} />
 		<meta property="og:url" content="https://www.deseocompartir.cl" />
 		<meta property="og:type" content="website" />
 
@@ -29,7 +30,7 @@ const description = "Modelo de Gestión e Interacción CoSocial";
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={"https://www.deseocompartir.cl"+thumbnail.src} />
+		<meta name="twitter:image" content={url_thumbnail} />
 	</head>
 	<body>
 		<main>
