@@ -1,4 +1,5 @@
 ---
+import { SEO } from 'astro-seo';
 import thumbnail from '../images/thumbnail.png';
 interface Props {
 	title: string;
@@ -19,18 +20,33 @@ const url_thumbnail = "https://www.deseocompartir.cl"+thumbnail.src;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={url_thumbnail} />
-		<meta property="og:url" content="https://www.deseocompartir.cl" />
-		<meta property="og:type" content="website" />
-
-		<!-- Twitter Card Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={url_thumbnail} />
+		<SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "web",
+          image: url_thumbnail,
+        }
+      }}
+      twitter={{
+        creator: "@esnavarrog"
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: url_thumbnail,
+          },
+          { name: "twitter:title", content: title },
+          { name: "twitter:description", content: description },
+        ],
+      }}
+    />
 	</head>
 	<body>
 		<main>
